@@ -1,11 +1,12 @@
+#Simple deployment manifest
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: go-web-app
   labels:
     app: go-web-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: go-web-app
@@ -15,7 +16,7 @@ spec:
         app: go-web-app
     spec:
       containers:
-        - name: nginx
-          image: nginx:1.14.2
+        - name: go-web-app
+          image: <docker-user-name>/go-web-app
           ports:
             - containerPort: 8080
