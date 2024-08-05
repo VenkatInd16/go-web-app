@@ -10,7 +10,7 @@ on:
     paths-ignore:
       - 'helm/**'
       - 'k8s/**'
-      - 'README.md'
+      - '**.md'
 
 jobs:
 
